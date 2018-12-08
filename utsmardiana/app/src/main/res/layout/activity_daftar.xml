@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Daftar">
+
+    <LinearLayout
+        android:layout_width="227dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="216dp"
+            android:layout_height="wrap_content"
+            android:text="Email" />
+
+        <EditText
+            android:id="@+id/editEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textEmailAddress" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="216dp"
+            android:layout_height="wrap_content"
+            android:text="Password" />
+
+        <EditText
+            android:id="@+id/editPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPassword" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="216dp"
+            android:layout_height="wrap_content"
+            android:text="Nama" />
+
+        <EditText
+            android:id="@+id/editNama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/btnDaftar"
+            android:layout_width="216dp"
+            android:layout_height="31dp"
+            android:background="#FF008000"
+            android:text="Daftar" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="216dp"
+            android:layout_height="wrap_content"
+            android:text="Atau daftar dengan: " />
+
+        <Button
+            android:id="@+id/btnGoogle"
+            android:layout_width="227dp"
+            android:layout_height="38dp"
+            android:drawableLeft="@drawable/google"
+            android:text="Google" />
+
+        <Button
+            android:id="@+id/btnFacebook"
+            android:layout_width="227dp"
+            android:layout_height="36dp"
+            android:drawableLeft="@drawable/facebook"
+            android:text="Facebook" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

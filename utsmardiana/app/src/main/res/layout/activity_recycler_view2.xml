@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RecyclerView2">
+
+
+    <TextView
+        android:id="@+id/txtViewJam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="19dp"
+        android:text="Pixy Make It Glow Skin Primer" />
+
+    <ImageView
+        android:id="@+id/imageViewJam"
+        android:layout_width="wrap_content"
+        android:layout_height="260dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="45dp"
+        app:srcCompat="@drawable/jammm" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageViewJam"
+        android:layout_alignStart="@+id/imageViewJam"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="16dp"
+        android:text="Base Makeup" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView9"
+        android:layout_alignStart="@+id/textView9"
+        android:text="Tahan Lama" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView10"
+        android:layout_alignStart="@+id/textView9"
+        android:text="Tekstur halus dan ringan" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView11"
+        android:layout_alignStart="@+id/textView9"
+        android:text="Melembabkan" />
+
+    <TextView
+        android:id="@+id/txtViewHarga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView12"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="5dp"
+        android:text="Rp 150000" />
+
+    <Button
+        android:id="@+id/btnBeli"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtViewHarga"
+        android:layout_toEndOf="@+id/textView9"
+        android:background="#FFFF6600"
+        android:text="Beli" />
+</RelativeLayout>

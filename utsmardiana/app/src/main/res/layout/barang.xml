@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="400dp"
+    android:padding="10dip">
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sunday Fun Shopping Day" />
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="match_parent"
+        android:layout_height="169dp"
+        android:layout_below="@+id/tv_title"
+        android:layout_alignParentStart="true"
+        android:contentDescription="TODO"
+        android:src="@drawable/toped" />
+
+    <TextView
+        android:id="@+id/tv_subtitle"
+        android:layout_width="fill_parent"
+        android:layout_height="26dip"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="95dp"
+        android:ellipsize="marquee"
+        android:text="Description"
+        android:textColor="@android:color/black"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="144dp"
+        android:layout_height="48dp"
+        android:layout_alignStart="@+id/textView5"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="39dp"
+        android:gravity="center_vertical"
+        android:text="Example application"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+</RelativeLayout>

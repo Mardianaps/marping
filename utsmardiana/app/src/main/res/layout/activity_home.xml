@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:id="@+id/layoutatas"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="64dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/scan" />
+
+                <SearchView
+                    android:layout_width="271dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"></SearchView>
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="69dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/love" />
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="83dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="4dp"
+                    app:srcCompat="@drawable/lonceng" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutbawah"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="0dp"
+            android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="33dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/home" />
+
+                <ImageView
+                    android:id="@+id/imageViewFeed_btn"
+                    android:layout_width="24dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/feed" />
+
+                <ImageView
+                    android:id="@+id/imageViewInbox"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/inbox" />
+
+                <ImageView
+                    android:id="@+id/imageViewKeranjang"
+                    android:layout_width="28dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/keranjang" />
+
+                <ImageView
+                    android:id="@+id/imageViewLogout"
+                    android:layout_width="51dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/logout" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layouttengah"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/layoutbawah"
+            android:layout_below="@+id/layoutatas"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="-6dp"
+            android:layout_marginBottom="6dp"
+            android:orientation="vertical">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="vertical" />
+        </LinearLayout>
+
+</RelativeLayout>

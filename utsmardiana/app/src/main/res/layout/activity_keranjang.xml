@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".keranjang">
+
+
+    <LinearLayout
+        android:id="@+id/layoutatas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Keranjang"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnDaftar"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginRight="20dp"
+            android:background="#FFFFFFFF"
+            android:text="Hapus" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/layouttengah"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/layoutbawah"
+        android:layout_below="@+id/layoutatas"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginBottom="-17dp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="50dp"
+            android:text="Gunakan Kode Promo atau Kupon"
+            android:textColor="#FF008000" />
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/textView13"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="80dp"
+            android:text="Penjual: luxcrime" />
+
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/textView13"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="122dp"
+            android:text="Luxcrime x Rachel Goddard" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="123dp"
+            android:layout_height="91dp"
+            android:layout_below="@+id/checkBox2"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="-2dp"
+            app:srcCompat="@drawable/rachel" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/imageView2"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="-70dp"
+            android:layout_marginBottom="171dp"
+            android:text="Rp 109.000"
+            android:textColor="#FFFF9900" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/textView13"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="120dp"
+            android:text="Tulis catatan untuk penjual"
+            android:textColor="#FF008000" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="46dp"
+            android:layout_marginBottom="50dp"
+            android:background="#FFFF9909"
+            android:text="Checkout" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/imageView2"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="82dp"
+            android:text="Total Harga" />
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button"
+            android:layout_alignStart="@+id/imageView2"
+            android:layout_marginTop="-69dp"
+            android:text="Rp 109.000"
+            android:textColor="#FFFF9900" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutbawah"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="33dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/home" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="24dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/feed" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/inbox" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="28dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/keranjang" />
+
+        <ImageView
+            android:id="@+id/imageViewLogout"
+            android:layout_width="51dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/logout" />
+    </LinearLayout>
+</RelativeLayout>

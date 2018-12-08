@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="comww.example.android.utsmardiana">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="utsmardiana"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".awal">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Daftar" />
+        <activity android:name=".Login" />
+        <activity android:name=".Home" />
+        <activity android:name=".MainActivity5" />
+        <activity android:name=".Logout" />
+        <activity android:name=".inbox" />
+        <activity android:name=".keranjang" />
+        <activity android:name=".feed" />
+        <activity android:name=".webView" />
+        <activity android:name=".RecyclerView2"></activity>
+    </application>
+
+</manifest>
