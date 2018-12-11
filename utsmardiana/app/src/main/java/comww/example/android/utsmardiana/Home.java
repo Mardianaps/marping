@@ -10,6 +10,15 @@ import android.view.View;
 import android.widget.ImageView;
 
 import java.util.ArrayList;
+import java.util.List;
+
+import comww.example.android.utsmardiana.Model.Barang;
+import comww.example.android.utsmardiana.Model.getBarang;
+import comww.example.android.utsmardiana.Rest.ApiClient;
+import comww.example.android.utsmardiana.Rest.ApiInterface;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class Home extends AppCompatActivity {
 
@@ -19,20 +28,19 @@ public class Home extends AppCompatActivity {
     private RecyclerView rvView;
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager layoutManager;
-    private ArrayList<RecyclerBarang> dataSet;
+    private List<Barang> dataSet;
+    private ApiInterface mApiInterface;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        dataSet = new ArrayList<>();
-        initDataset();
+
+
+        mApiInterface = ApiClient.getClient().create(ApiInterface.class);
+//        dataSet = new ArrayList<>();
         rvView = (RecyclerView) findViewById(R.id.rv_main);
-        rvView.setHasFixedSize(true);
-        layoutManager = new LinearLayoutManager(this);
-        rvView.setLayoutManager(layoutManager);
-        adapter = new RecyclerViewAdapter(dataSet, this);
-        rvView.setAdapter(adapter);
+        initDataset();
         imageLogout = findViewById(R.id.imageViewLogout);
         imageInbox = findViewById(R.id.imageViewInbox);
         imageKeranjang = findViewById(R.id.imageViewKeranjang);
@@ -74,20 +82,38 @@ public class Home extends AppCompatActivity {
 
 
     private void initDataset () {
-        RecyclerBarang brg = new RecyclerBarang("Jam Tangan", "Rp 699000000", R.drawable.jammm);
-        dataSet.add(brg);
+//        RecyclerBarang brg = new RecyclerBarang("Car Sit Baby", "Rp 699000000", R.drawable.aaa);
+//        dataSet.add(brg);
+//
+//        brg = new RecyclerBarang("Celana", "Rp 200000", R.drawable.bbb);
+//        dataSet.add(brg);
+//
+//        brg = new RecyclerBarang("Bed Baby", "Rp 250000", R.drawable.ccc);
+//        dataSet.add(brg);
+//
+//        brg = new RecyclerBarang("Food Set", "Rp 5500000", R.drawable.ddd);
+//        dataSet.add(brg);
+//
+//        brg = new RecyclerBarang("Hipseat Baby", "Rp 5500000", R.drawable.eee);
+//        dataSet.add(brg);
 
-        brg = new RecyclerBarang("Buah", "Rp 200000", R.drawable.buah);
-        dataSet.add(brg);
+        Call<getBarang> getBarang = mApiInterface.getBarang();
+        getBarang.enqueue(new Callback<comww.example.android.utsmardiana.Model.getBarang>() {
+            @Override
+            public void onResponse(Call<comww.example.android.utsmardiana.Model.getBarang> call, Response<comww.example.android.utsmardiana.Model.getBarang> response) {
+               dataSet = response.body().getListBarang();
 
-        brg = new RecyclerBarang("Lipstik", "Rp 250000", R.drawable.lipstik);
-        dataSet.add(brg);
+                layoutManager = new LinearLayoutManager(getApplicationContext());
+                rvView.setLayoutManager(layoutManager);
+                adapter = new RecyclerViewAdapter(dataSet, getApplication());
+                rvView.setAdapter(adapter);
+            }
 
-        brg = new RecyclerBarang("Laptop", "Rp 5500000", R.drawable.laptop);
-        dataSet.add(brg);
+            @Override
+            public void onFailure(Call<comww.example.android.utsmardiana.Model.getBarang> call, Throwable t) {
 
-        brg = new RecyclerBarang("Baju", "Rp 5500000", R.drawable.buajuu);
-        dataSet.add(brg);
+            }
+        });
 
     }
 }

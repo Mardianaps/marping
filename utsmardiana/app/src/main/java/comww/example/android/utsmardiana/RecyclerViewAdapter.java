@@ -9,13 +9,19 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
+import java.util.List;
+
+import comww.example.android.utsmardiana.Model.Barang;
+import comww.example.android.utsmardiana.Rest.ApiClient;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
-    private ArrayList<RecyclerBarang> rvData;
+    private List<Barang> rvData;
     Context mContext;
 
-    public RecyclerViewAdapter(ArrayList<RecyclerBarang> inputData, Context co) {
+    public RecyclerViewAdapter(List<Barang> inputData, Context co) {
         mContext = co;
         rvData = inputData;
     }
@@ -41,22 +47,22 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        final RecyclerBarang barang = rvData.get(position);
-        holder.tvTitle.setText(barang.namaBarang);
-        holder.tvImage.setImageResource(barang.getImageView());
-        holder.tvSubtitle.setText(barang.namaHarga);
+        final Barang barang = rvData.get(position);
+        holder.tvTitle.setText(barang.getNama());
+        holder.tvSubtitle.setText(barang.getDiskripsi());
+        Picasso.get().load(ApiClient.BASE_ASSETS+barang.getGambar()).into(holder.tvImage);
 
-        holder.tvImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent (mContext, MainActivity5.class);
-                i.putExtra("namaBarang", barang.namaBarang);
-                i.putExtra("namaHarga", barang.namaHarga);
-                i.putExtra("imageBarang", barang.imageView);
-
-                mContext.startActivity(i);
-            }
-        });
+//        holder.tvImage.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i = new Intent (mContext, MainActivity5.class);
+//                i.putExtra("namaBarang", barang.namaBarang);
+//                i.putExtra("namaHarga", barang.namaHarga);
+//                i.putExtra("imageBarang", barang.imageView);
+//
+//                mContext.startActivity(i);
+//            }
+//        });
     }
 
     @Override

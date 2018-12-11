@@ -1,6 +1,7 @@
 package comww.example.android.utsmardiana;
 
 import android.content.Intent;
+import android.content.pm.PackageInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,17 +17,17 @@ public class awal extends AppCompatActivity {
         setContentView(R.layout.awal);
 
         btnToped = findViewById(R.id.imgToped);
-        SessionManagement sessionManagement = new SessionManagement(this);
-        if(sessionManagement.isLoggedIn()){
-            Intent k = new Intent(getApplicationContext(),Home.class);
-            startActivity(k);
-            finish();
-        }
+//        SessionManagement sessionManagement = new SessionManagement(this);
+//        if(sessionManagement.isLoggedIn()){
+//            Intent k = new Intent(getApplicationContext(),Pilihan_akun.class);
+//            startActivity(k);
+//            finish();
+//        }
 
         btnToped.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent k = new Intent(getApplicationContext(),Login.class);
+                Intent k = new Intent(getApplicationContext(),Pilihan_akun.class);
                 startActivity(k);
             }
         });

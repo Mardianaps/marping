@@ -43,16 +43,16 @@ public class feed extends AppCompatActivity {
     }
 
     private void initDataset2 () {
-        RecyclerBarang2 brg = new RecyclerBarang2("Top T-shirt", "Rp 1500000", R.drawable.zara);
+        RecyclerBarang2 brg = new RecyclerBarang2("Fullset Baby", "Rp 1500000", R.drawable.fff);
         dataSet2.add(brg);
 
-        brg = new RecyclerBarang2("Sepatu", "Rp 2000000", R.drawable.zaraman);
+        brg = new RecyclerBarang2("Daily Baby Finds", "Rp 2000000", R.drawable.ggg);
         dataSet2.add(brg);
 
-        brg = new RecyclerBarang2("Primer", "Rp 1000000", R.drawable.pixy);
+        brg = new RecyclerBarang2("Carseat Baby Car", "Rp 1000000", R.drawable.hhh);
         dataSet2.add(brg);
 
-        brg = new RecyclerBarang2("Cushion", "Rp 500000", R.drawable.pixy);
+        brg = new RecyclerBarang2("These Luxury Strollers", "Rp 500000", R.drawable.iii);
         dataSet2.add(brg);
     }
 

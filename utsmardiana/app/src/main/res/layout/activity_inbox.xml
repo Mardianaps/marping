@@ -63,15 +63,6 @@
             android:background="#FFFFFFFF" />
 
         <Button
-            android:id="@+id/buttonDiskusi"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/diskusi"
-            android:text="Diskusi"
-            android:textStyle="bold"
-            android:background="#FFFFFFFF" />
-
-        <Button
             android:id="@+id/buttonBantuan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

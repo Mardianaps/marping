@@ -1,32 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FF008000"
+    android:background="#FF99CCFF"
     tools:context="comww.example.android.utsmardiana.awal">
-
 
     <ImageView
         android:id="@+id/imgToped"
         android:layout_width="match_parent"
-        android:layout_height="92dp"
+        android:layout_height="match_parent"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="209dp"
-        app:srcCompat="@drawable/toped" />
+        android:layout_marginTop="0dp"
+        app:srcCompat="@drawable/logooo" />
 
-    Button
-        android:id="@+id/btn_Login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/btn_Daftar"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="171dp"
-        android:layout_marginTop="305dp"
-        android:background="#FF00FF00"
-        android:text="Login" />
 </RelativeLayout>

@@ -57,7 +57,7 @@
             android:id="@+id/btnDaftar"
             android:layout_width="216dp"
             android:layout_height="31dp"
-            android:background="#FF008000"
+            android:background="#FF99CCFF"
             android:text="Daftar" />
 
         <TextView

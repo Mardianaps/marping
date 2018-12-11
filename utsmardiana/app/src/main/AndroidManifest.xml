@@ -3,10 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="comww.example.android.utsmardiana">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="utsmardiana"
+        android:label="marping"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -26,7 +29,11 @@
         <activity android:name=".keranjang" />
         <activity android:name=".feed" />
         <activity android:name=".webView" />
-        <activity android:name=".RecyclerView2"></activity>
+        <activity android:name=".RecyclerView2" />
+        <activity android:name=".Pilihan_akun" />
+        <activity android:name=".new_barang" />
+        <activity android:name=".chat" />
+        <activity android:name=".pusat_bantuan"></activity>
     </application>
 
 </manifest>
